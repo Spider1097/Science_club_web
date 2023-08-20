@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a::before {
+    content: '';
+    position: absolute;
+    background-color: blueviolet;
+    width: 0%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    transition: 1s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+section{
+    padding: 40px 15%;
+
+}
+
+.contact{
+    background: #ff5100;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    align-items: center;
+    grid-gap:6rem;
+}
+
+.contakt_img img{
+max-width: 100%;
+width: 720px;
+height: auto;
+border-radius: 30px;
+}
+
+.contact-form h1{
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+span{
+    color: red;
+}
+
+.contact-form p{
+color: rgb(233, 207, 207);
+letter-spacing: 1px;
+line-height: 26px;
+font-size: 1.1rem;
+margin-bottom: 3.8rem;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input,
+form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background-color: #191919;
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contact-form form .btn{
+    display: inline-block;
+    background-color: #f9004d;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease 0.7s;
+    cursor: pointer;
+}
+
+.contact-form form .btn:hover{
+    border: 2px solid #f9004d;
+    background: transparent;
+    transform: scale(1.1rem)
+}
+
+@media (max-width: 1040px) {
+
+    section{
+        padding: 80px 3%;
+        transition: 0.5s;
+    }
+
+    .contact-form h1{
+        font-size: 60px;
+    }
+
+    .contact-form p{
+margin-bottom: 3rem;
+    }
+
+    .contact{
+        grid-gap: 2rem;
+        transition: 0.5s;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form{
+        order:2 ;
+    }
+
+    .contakt_img img{
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+
+    header {
+        padding: 12px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-items a {
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a:before {
+        background: #222;
+        height: 5px;
+
+    }
+
+    header .navigation.active .navigation-items {
+        background-color: white;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 /20%);
+    }
+
+    .burger {
+        display: flex;
+        position: relative;
+        z-index: 999;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30px;
+        height: 18px;
+    }
+
+    .burger span {
+        height: 2px;
+        width: 80%;
+        transform: (1);
+        background-color: red;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        transition: all 1s ease;
+    }
+
+    .burger::before {
+        top: 0
+    }
+
+    .burger::after {
+        bottom: 0
+    }
+
+    .burger.active span {
+        transform: scale(0)
+    }
+
+    .burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    .burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
+    }
+
+}
