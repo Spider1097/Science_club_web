@@ -4,19 +4,16 @@
     box-sizing: border-box;
 }
 
-/* tu deklarujemy tylne zdięcia strony */
 .container {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/skn_img/back_image.JPG);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/skn_img/stock-people-business-work.jpg);
     background-position: center;
     background-size: cover;
     padding-left: 2%;
     padding-right: 2%;
     box-sizing: border-box;
 }
-
-/* tu deklarujemy tylne zdięcia strony */
 
 header {
     z-index: 999;
@@ -90,7 +87,6 @@ p {
 
 .columna {
     flex-basis: 50%;
-    /* margin-left: 50px; */
 }
 
 .button_dolacz {
@@ -104,7 +100,6 @@ p {
     outline: none;
     margin-top: 30px;
     cursor: pointer;
-    /* transition: width 1s, background-color 1s; */
     transition: padding 0.5s,background-color 1s,border-radius 1s;
 }
 
@@ -176,7 +171,6 @@ p {
 .content.active img{
     margin-top: 50px;
     width: 350px;
-    /* height: 400px; */
     display: inline-block;
     border-radius: 30px;
     box-sizing: border-box;
